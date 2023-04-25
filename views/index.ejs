@@ -5,24 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/d451d1e88b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/public/main.css">
+    <script src="https://kit.fontawesome.com/d451d1e88b.js" crossorigin="anonymous"></script>
 </head>
 <body>   
-
-    <%= weather.description %>
-    <%= sys.sunrise %>
-    <%= sys.sunset %>
-    <%= weather.icon %>
-    <%= main.temp %>
-    <%= main.feels_like %>
-    <%= main.pressure %>
-    <%= main.humidity %> 
-    <%= wind.speed %>
-    <%= clouds.all %>
-    <%= dt %>
-    <%= visibility %>
-    <%= name %>  
+    <div class="card">
+		<div class="card__info">
+			<p class="card__info__place"><%= name %></p>
+			<p class="card__info__time"><%= hour %></p>
+			<p class="card__info__date"><%= date[0]%> <%= date[1]%> <%= date[2]%> | <%= date[3]%></p>
+		</div>
+        <div class="">
+		    <div class="card__weather">
+                <img src="http://openweathermap.org/img/wn/<%= weather[0].icon %>.png" alt="">
+		    	<p class="card__weather__temp"><%= Math.trunc(main.temp) %>° C</p>
+		    </div>
+        </div>
+	</div>
     <script src="/public/jquery.js"></script>
     <script src="/public/main.js"></script>
 </body>
