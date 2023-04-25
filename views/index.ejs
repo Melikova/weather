@@ -5,8 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/d451d1e88b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/main.css">
 </head>
-<body>
-    <%= coord.lon %> 
+<body>   
+
+    <%= weather.description %>
+    <%= sys.sunrise %>
+    <%= sys.sunset %>
+    <%= weather.icon %>
+    <%= main.temp %>
+    <%= main.feels_like %>
+    <%= main.pressure %>
+    <%= main.humidity %> 
+    <%= wind.speed %>
+    <%= clouds.all %>
+    <%= dt %>
+    <%= visibility %>
+    <%= name %>  
+    <script src="/public/jquery.js"></script>
+    <script src="/public/main.js"></script>
 </body>
 </html>
